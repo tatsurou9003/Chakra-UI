@@ -1,4 +1,4 @@
-import { memo, FC } from 'react';
+import React, { memo, FC } from 'react';
 
 export const Login: FC = memo(() => {
   return <p>Login</p>;
