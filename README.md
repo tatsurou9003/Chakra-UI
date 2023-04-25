@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+＃typescript の React チュートリアル兼、ChakraUI を触ってみる。
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Table of Contents

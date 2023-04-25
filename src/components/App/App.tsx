@@ -1,5 +1,10 @@
-import { Button, ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Router } from '../../router/Router';
+
+import theme from '../../theme/theme';
+
 // import { Provider } from 'react-redux';
 // import { BrowserRouter } from 'react-router-dom';
 // import { store } from '../../store';
@@ -8,8 +13,10 @@ import React from 'react';
 
 export const App = () => {
   return (
-    <ChakraProvider>
-      <Button colorScheme="teal">ボタン</Button>
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </ChakraProvider>
   );
 };
