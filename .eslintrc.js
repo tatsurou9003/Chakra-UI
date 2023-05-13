@@ -46,5 +46,6 @@ module.exports = {
     'no-underscore-dangle': ['error', { allow: ['__WB_MANIFEST'] }],
     'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
     'react/require-default-props': ['error', { ignoreFunctionalComponents: true }],
+    'react/prop-types': 'off',
   },
 };
