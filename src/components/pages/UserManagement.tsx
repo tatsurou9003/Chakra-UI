@@ -1,6 +1,7 @@
 import { Center, Spinner, useDisclosure, Wrap, WrapItem } from '@chakra-ui/react';
 import React, { memo, FC, useEffect, useCallback } from 'react';
 import { useAllUsers } from '../hooks/useAllUsers';
+import { useLoginUser } from '../hooks/useLoginUser';
 import { useSelectUser } from '../hooks/useSelectUser';
 import { UserCard } from '../organisms/user/UserCard';
 import { UserDetailModal } from '../organisms/user/UserDetailModal';
@@ -10,12 +11,15 @@ export const UserManagement: FC = memo(() => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { getUsers, users, loading } = useAllUsers();
   const { onSelectUser, selectedUser } = useSelectUser();
+  const { loginUser } = useLoginUser();
+  console.log(loginUser);
 
   useEffect(() => getUsers(), []);
 
   const onClickUser = useCallback(
     (id: number) => {
-      onSelectUser({ id, users, onOpen }); // カスタムフックの関数に引数（props）をオブジェクトで渡す;
+      onSelectUser({ id, users, onOpen }); // カスタムフックの関数に引数（props）をオブジェクトで渡す;;
+      console.log(users);
     },
     [onSelectUser, onOpen] // 選択されたUserが変わるたびに計算
   );
